@@ -1,8 +1,14 @@
+@Library('robo-shared-library')
+
 pipeline {
     agent any
     stages{
         // should run on every coomit to feautre branch 
         stage('Lint Check'){
+            script{
+                sample.info("Hello")
+
+            }
             steps{
             sh "echo Installing Jslint"
             sh "npm install jslint"
