@@ -5,11 +5,11 @@ pipeline {
     stages{
         // should run on every coomit to feautre branch 
         stage('Lint Check'){
-            script{
+            steps{
+                 script {
                 sample.info("Hello")
 
             }
-            steps{
             sh "echo Installing Jslint"
             sh "npm install jslint"
             sh "ls -ltr node_modules/jslint/bin"
