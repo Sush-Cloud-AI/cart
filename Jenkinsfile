@@ -1,7 +1,8 @@
 pipeline {
     agent any
     stages{
-        steps('Lint Check'){
+        stage('Lint Check'){
+            steps{
             sh "echo Installing Jslint"
             sh "npm install jslint"
             sh "ls -ltr node_modules/jslint/bin"
@@ -9,4 +10,6 @@ pipeline {
 
         }
     }
+}
+
 }
